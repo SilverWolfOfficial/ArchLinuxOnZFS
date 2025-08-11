@@ -1,4 +1,4 @@
-# 在ZFS上安装Arch Linux 最后更新于2025年08月10日
+# 在ZFS文件系统上安装Arch Linux 最后更新于2025年08月10日
 
 ### 1.构建带有ZFS文件系统支持的系统镜像
 
@@ -123,7 +123,7 @@ $ genfstab -U -p /mnt > /mnt/etc/fstab
 #生成/mnt/etc/fstab文件
 
 $ vim /mnt/etc/fstab
-#编辑/mnt/etc/fstab文件，dump和fsck项填为0（一般为一行中的最后两个数字）并删除所有关于ZFS的内容，ZFS文件系统不依赖该文件进行挂载，仅保留/boot所在的行和swap所在的行即可
+#编辑/mnt/etc/fstab文件，删除所有关于ZFS的内容，ZFS文件系统不依赖该文件进行挂载，仅保留/boot所在的行和swap所在的行即可
 
 $ arch-chroot /mnt
 #进入目标系统
